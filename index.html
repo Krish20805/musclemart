@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unisex Gym</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <header>
+    <div class="header-left">
+      <!-- logo -->
+      <div class="logo">
+        <img style="width: 150px; height:auto;" src="logo.png" alt="Gym Logo">
+      </div>
+    </div>
+    <div class="header-center">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="order.html">My Orders</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- dropdown -->
+    <div class="header-right">
+      <div class="profile">
+        <button onclick="window.location.href = 'signup.html';">Sign up</button>
+        <div class="dropdown-content" id="myDropdown">
+          <a style="color: black;" href="#">My Profile</a>
+          <a style="color: black;" href="#">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- navbar end -->
+
+  <!-- image and bmi and footer -->
+  <div style="background-color: #c5d4f1;">
+    <!-- image -->
+    <main>
+      <div class="image-container">
+        <img src="img.jpg" alt="Gym Image">
+      </div>
+    </main>
+
+    <!-- bmi -->
+    <section class="bmi-calculator">
+      <h2>Calculate Your Body Mass Index</h2>
+      <form id="bmiForm" action="#">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" required>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" required>
+
+        <br>
+
+        <button style="background-color: rgb(73, 76, 247);" type="submit">Calculate</button>
+      </form>
+
+      <p id="result" style="margin-top: 10px; font-weight: bold;"></p> <!-- result will show here -->
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2>Contact Us</h2>
+          <form action="#">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button style="background-color: rgb(73, 76, 247);" type="submit">Submit</button>
+          </form>
+        </div>
+        <div style="margin-left:100px;" class="footer-section">
+          <h2>Musclemart</h2>
+          <ul style="color: #000000;">
+            <li><a href="product.html">Product</a></li>
+            <li><a href="order.html">My Orders</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <div class="about">
+            <h2>Keep in Touch</h2>
+            <div class="social-icons">
+              <img src="facebook.png" alt="Facebook">
+              <img src="instagram.png" alt="Instagram">
+              <img src="twitter.png" alt="Twitter">
+              <img src="youtube.png" alt="YouTube">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2024 Musclemart. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <!-- your BMI script -->
+  <script>
+    const form = document.getElementById('bmiForm');
+
+    form.onsubmit = function (e) {
+
+      const h = document.getElementById('height').value / 100;
+      const w = document.getElementById('weight').value;
+
+      if (h && w) {
+        const bmi = (w / (h * h)).toFixed(2);
+        document.getElementById('result').textContent = "Your BMI is: " + bmi;
+      } else {
+        document.getElementById('result').textContent = "Enter valid numbers!";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

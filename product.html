@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <!-- logo -->
+            <div class="logo">
+                <img style="width: 150px; height:auto;" src="logo.png" alt="Gym Logo">
+            </div>
+        </div>
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="order.html">My Orders</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- dropdown -->
+        <div class="header-right">
+            <div class="profile">
+                <button onclick="window.location.href = 'signup.html';">Sign up</button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a style="color: black;" href="#">My Profile</a>
+                    <a style="color: black;" href="#">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="filter-container">
+            <label for="category">Select Category:</label>
+            <select id="category" name="category" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="Dumbells">Dumbells</option>
+                <option value="Home Equipment">Home Equipment</option>
+                <option value="Sipper">Sipper</option>
+                <option value="Supports">Supports</option>
+            </select>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-category="Dumbells">
+                <img src="5 kg dumbell.jpg" alt="Dumbells">
+                <h2>5 kg dumbells</h2>
+                <p>₹1,050 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Home Equipment">
+                <img src="grip.jpeg" alt="Home Equipment">
+                <h2>handgrip</h2>
+                <p>₹199 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="pink.jpg" alt="Sipper">
+                <h2>Pink Sipper</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Supports">
+                <img src="glove.jpg" alt="Supports">
+                <h2>glove</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="black.jpg" alt="Sipper">
+                <h2>Black Sipper</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Dumbells">
+                <img src="set.jpg" alt="Dumbells">
+                <h2>2 dumbell set </h2>
+                <p>₹2,599 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Home Equipment">
+                <img src="ball.jpg" alt="Home Equipment">
+                <h2>Swissball</h2>
+                <p>₹379 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Home Equipment">
+                <img src="boxing bag.jpg" alt="Home Equipment">
+                <h2>Punching Bag</h2>
+                <p>₹899 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Dumbells">
+                <img src="rod.jpg" alt="Dumbells">
+                <h2>gym weight rod</h2>
+                <p>₹999 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Dumbells">
+                <img src="plates.jpg" alt="Dumbells">
+                <h2>Iron Plates </h2>
+                <p>₹1,499 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Home Equipment">
+                <img src="roll.jpeg" alt="Home Equipment">
+                <h2>Foam roller</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Dumbells">
+                <img src="6kg kettel.jpg" alt="Dumbells">
+                <h2>6 kg Kettlebell</h2>
+                <p>₹499 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Home Equipment">
+                <img src="boxing bag1.jpg" alt="Home Equipment">
+                <h2>Punching Bag</h2>
+                <p>₹759</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="green.jpg" alt="Sipper">
+                <h2>Green Sipper</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Dumbells">
+                <img src="15 kg kettle.jpg" alt="Dumbells">
+                <h2>15 kg Kettlebell</h2>
+                <p>₹699 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="metal.jpg" alt="Sipper">
+                <h2>Mettalic bottle</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Supports">
+                <img src="boxing glove.jpg" alt="Supports">
+                <h2>boxing glove</h2>
+                <p>₹1102 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="coloured.jpg" alt="Sipper">
+                <h2>Coloured bottles </h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Supports">
+                <img src="belt.jpg" alt="Supports">
+                <h2>belt</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card" data-category="Sipper">
+                <img src="blue.jpg" alt="Sipper">
+                <h2>Blue bottle</h2>
+                <p>₹702 each</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <form action="#">
+                    <input type="email" name="email" placeholder="Your Email">
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <button style="background-color: rgb(73, 76, 247);" type="submit">Submit</button>
+                </form>
+            </div>
+            <div style="margin-left:100px;" class="footer-section">
+                <h2>Musclemart</h2>
+                <ul style="color: #000000;">
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="order.html">My Orders</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <div class="about">
+                    <h2>Keep in Touch</h2>
+                    <div class="social-icons">
+                        <img src="facebook.png" alt="Facebook">
+                        <img src="instagram.png" alt="Instagram">
+                        <img src="twitter.png" alt="Twitter">
+                        <img src="youtube.png" alt="YouTube">
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2024 Musclemart. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function filterProducts() {
+            const category = document.getElementById('category').value;
+            const products = document.querySelectorAll('.product-card');
+            products.forEach(product => {
+                if (category === 'all' || product.getAttribute('data-category') === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

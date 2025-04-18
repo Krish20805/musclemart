@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <div class="order-container">
+        <div class="order-form">
+            <h1>Order Now</h1>
+            <div class="form-group">
+                <label for="item">Select Item</label>
+                <select id="item" name="item">
+                    <option value="" disabled selected>Choose an item</option>
+                    <option value="Dumbells">Dumbells</option>
+                    <option value="Home Equipment">Home Equipment</option>
+                    <option value="Sipper">Sipper</option>
+                    <option value="Supports">Supports</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" min="1">
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" placeholder="Enter delivery address"></textarea>
+            </div>
+            <button type="submit" onclick="window.location.href = 'index.html';">Place Order</button>
+        </div>
+    </div>
+</body>
+
+</html>
